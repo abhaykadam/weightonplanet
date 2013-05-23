@@ -9,4 +9,4 @@ Running the utility on local system
 
 Run following in terminal:
 
-$ rackup config
+        $ rackup config
