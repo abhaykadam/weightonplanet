@@ -17,6 +17,7 @@ class Planet
   property :ratio,  Float
 end
 
+Planet.finalize
 Planet.auto_upgrade!
 
 get '/' do
