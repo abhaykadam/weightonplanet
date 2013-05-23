@@ -11,4 +11,10 @@ Run following command in terminal:
 
         $ rackup config
 		
-Then, open the [address](http://localhost:9292/?weight=25&from=Mars&to=The%20Sun)
+Then, open this [address](http://localhost:9292/?weight=25&from=Mars&to=The%20Sun) in browser.
+
+As a output, you should see something like:
+
+        {
+          "The Sun": "1795.2254641909815"
+        }
