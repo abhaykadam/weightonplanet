@@ -1,2 +1,2 @@
-require 'weightonplanet'
+require './weightonplanet'
 run Sinatra::Application

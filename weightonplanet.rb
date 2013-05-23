@@ -7,7 +7,7 @@ before do
   content_type 'application/json'
 end
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://weightonplanet.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/weightonplanet.db")
 
 class Planet
   include DataMapper::Resource
@@ -17,7 +17,6 @@ class Planet
   property :ratio,  Float
 end
 
-DataMapper.finalize
 Planet.auto_upgrade!
 
 get '/' do
