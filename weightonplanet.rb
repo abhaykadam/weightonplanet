@@ -21,14 +21,14 @@ Planet.finalize
 Planet.auto_upgrade!
 
 get '/' do
-  from_planet = params[:from]
-  to_planet = params[:to]
+  from_planet = Planet.first(name: params[:from])
+  to_planet = Planet.first(name: params[:to])
   from_weight = params[:weight]
   
   if from_planet.nil? || to_planet.nil? || from_weight.nil? then
     status 404
   else
-    to_weight = (from_weight.to_f / Planet.first(name: from_planet).ratio) * Planet.first(name: to_planet).ratio
-    MultiJson.dump({to_planet.to_sym => to_weight.to_s}, pretty: true)
+    to_weight = (from_weight.to_f / from_planet.ratio) * to_planet.ratio
+    MultiJson.dump({to_planet.name.to_sym => to_weight.to_s}, pretty: true)
   end
 end
