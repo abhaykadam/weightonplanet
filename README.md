@@ -1,10 +1,10 @@
 Weight on Planet
 ================
 
-This is a utility which helps to convert weight (in K.G.) between
+This is a utility web-service which helps to convert weight (in K.G.) between
 planets.
 
-Running the utility on local system
+Running the web-service on local system
 -----------------------------------
 
 Run following command in terminal:
@@ -19,7 +19,7 @@ As a output, you should see something like:
           "The Sun": "1795.2254641909815"
         }
 		
-Deploying the utility to Heroku
+Deploying the web-service to Heroku
 -------------------------------
 
 Fire the commands from the terminal:
