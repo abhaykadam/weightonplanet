@@ -2,10 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'multi_json'
 require 'data_mapper'
-
-before do
-  content_type 'application/json'
-end
+require 'haml'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/weightonplanet.db")
 
@@ -20,7 +17,9 @@ end
 Planet.finalize
 Planet.auto_upgrade!
 
-get '/' do
+get '/from/:from/to/:to/weight/:weight.json' do
+  content_type :json
+  
   from_planet = Planet.first(name: params[:from])
   to_planet = Planet.first(name: params[:to])
   from_weight = params[:weight]
@@ -33,6 +32,12 @@ get '/' do
   end
 end
 
-get '/planets' do
+get '/planets.json' do
+  content_type :json
+  
   MultiJson.dump(planets: Planet.all.map(&:name).sort)
+end
+
+get '/' do
+  haml :home
 end
