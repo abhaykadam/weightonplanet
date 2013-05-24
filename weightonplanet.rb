@@ -34,5 +34,5 @@ get '/' do
 end
 
 get '/planets' do
-  MultiJson.dump(planets: Planet.all.map(&:name))
+  MultiJson.dump(planets: Planet.all.map(&:name).sort)
 end
