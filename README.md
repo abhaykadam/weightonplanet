@@ -11,7 +11,7 @@ Run following command in terminal:
 
         $ rackup config
 		
-Then, open this [address](http://localhost:9292/?weight=25&from=Mars&to=The%20Sun) in a browser.
+Then, open this [address](http://localhost:9292/from/Mars/to/Venus/weight/25.json) in a browser.
 
 As a output, you should see something like:
 
