@@ -1,7 +1,7 @@
 Weight on Planet
 ================
 
-This is a utility web-service which helps to convert weight (in K.G.) between
+This is a utility web-service which helps to convert weight (in kg) between
 planets.
 
 Running the web-service on local system
@@ -20,7 +20,7 @@ As a output, you should see something like:
         }
 		
 Deploying the web-service to Heroku
--------------------------------
+-----------------------------------
 
 Fire the commands from the terminal:
 
@@ -35,3 +35,10 @@ Use `heroku config` to get the correct one.
 
 #####Transferring the local database to Heroku
         $ heroku db:push sqlite://weightonplanet.db
+		
+Using Weight on Planet
+----------------------
+
+After deploying the service to Heroku or after racking-up locally,
+one can go to `http://localhost:9292/planets` to see the current list of
+supported planets of the service.
