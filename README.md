@@ -29,6 +29,6 @@ Fire the commands from the terminal:
         $ heroku addons:add heroku-postgresql:dev
 		$ heroku pg:promote HEROKU_POSTGRESQL_ORANGE_URL
 		
-The last command sets the DATABASE_URL environment variable to point to 
+The last command sets the `DATABASE_URL` environment variable to point to 
 the added posgres instance; the name depends on the added instance type.
 Use `heroku config` to get the correct one.
