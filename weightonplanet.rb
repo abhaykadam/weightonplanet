@@ -32,3 +32,7 @@ get '/' do
     MultiJson.dump({to_planet.name.to_sym => to_weight.to_s}, pretty: true)
   end
 end
+
+get '/planets' do
+  MultiJson.dump(planets: Planet.all.map(&:name))
+end
