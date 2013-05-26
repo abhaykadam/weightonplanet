@@ -51,7 +51,7 @@ So, for instance, the `GET` request for converting 25 kg from Jupiter to Mars wo
 
         GET '/weight/25/from/Jupiter/to/Mars.json'
         
-#####Dealing with Database
+####Dealing with Database
 
 The Sqlite is used as a database to store the information about planets and the conversion rate between them.
 
