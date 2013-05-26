@@ -16,9 +16,9 @@ Then, open this [address](http://localhost:9292/weight/25/from/Earth/to/Jupiter.
 As a output, you should see something like:
 
         {
-          "The Sun": "1795.2254641909815"
+          "Jupiter": "59.099999999999994"
         }
-		
+
 Deploying the web-service to Heroku
 -----------------------------------
 
