@@ -40,5 +40,13 @@ Using Weight on Planet
 ----------------------
 
 After deploying the service to Heroku or after racking-up locally,
-one can go to `http://localhost:9292/planets` to see the current list of
-supported planets of the service.
+one can go to `http://localhost:9292/planets.json` to see the current list of
+supported planets.
+
+The route for getting the conversion done is:
+
+        GET '/weight/:weight/from/:from/to/:to.json'
+        
+So, for instance, the `GET` request for converting 25 kg from Jupiter to Mars would be,
+
+        GET '/weight/25/from/Jupiter/to/Mars.json'
