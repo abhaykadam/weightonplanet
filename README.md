@@ -1,8 +1,8 @@
 Weight on Planet
 ================
 
-This is a utility web-service which helps to convert weight (in kg) between
-planets.
+This is a Sinatra based utility web-service which helps to convert weight (in kg) between
+planets. The service uses JSON as a data exchange format.
 
 Running the web-service on local system
 -----------------------------------
@@ -50,3 +50,10 @@ The route for getting the conversion done is:
 So, for instance, the `GET` request for converting 25 kg from Jupiter to Mars would be,
 
         GET '/weight/25/from/Jupiter/to/Mars.json'
+        
+#####Dealing with Database
+
+The Sqlite is used as a database to store the information about planets and the conversion rate between them.
+
+Just single table, called `planet` is needed to store this information. The table contains is a tuple of planet's name and the ratio of its weight to that of the Earth's 1 kg. So, adding a new planet to the table is real simple.
+Just add the planet's name and the converted value of weight of 1 kg on Earth to that planet.
