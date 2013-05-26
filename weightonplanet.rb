@@ -17,7 +17,7 @@ end
 Planet.finalize
 Planet.auto_upgrade!
 
-get '/from/:from/to/:to/weight/:weight.json' do
+get '/weight/:weight/from/:from/to/:to.json' do
   content_type :json
   
   from_planet = Planet.first(name: params[:from])
